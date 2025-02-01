@@ -43,7 +43,7 @@
       <div class="content">
 
         <h2>Information Technology Governance</h2>
-        <h3>Data Governance</h3>
+        <h3>The governance wouldn’t seen like a set of restrictions, but rather an digital enabler.</h3>
         <p>
           Data-governance!
         </p>
