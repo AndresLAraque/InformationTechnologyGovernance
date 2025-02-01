@@ -10,7 +10,6 @@
   body {
     background-color: rgb(6, 7, 12);
     font-family: inter;
-    background-image: url(background-img.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -55,15 +54,19 @@
   
   /* Hero-section */
   #hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    width: 100%; /* Asegurar que ocupa todo el ancho */
+    justify-content: space-between;
+    align-items: center;
   }
   /* Left */
   .hero-left {
+    flex: 1; /* Ocupar más espacio disponible */
     display: flex;
-    align-items: center;
-    padding-top: 10px;
-    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 100%; /* No restringir el ancho */
   }
   
   h1{
@@ -76,18 +79,37 @@
     font-size: 1.3rem;
     font-weight: 800;
     color: #3FA2F6;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   
   p {
     font-size: 1.2rem;
+    font-weight: 800;
     color: lightgray;
     line-height: 1.5;
-    padding-bottom: 50px;
   }
+
   
+/* Estilos para el texto */
+.texto {
+  position: relative; /* Eliminar fixed */
+  width: 100%; /* Ocupar todo el ancho */
+  max-width: 100%; /* Evitar estrechamiento */
+  font-size: 1rem;
+  font-weight: 400;
+  color: lightgray;
+  line-height: 1.6;
+  padding: 10px 0;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
   /* button */
   .cta button {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en móviles */
+    gap: 20px; /* Espaciado entre botones */
+    margin-top: 20px; /* Separación del texto */
     color: black;
     font-size: 0.8rem;
     font-weight: 300;
